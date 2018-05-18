@@ -7,7 +7,7 @@ bot.on('ready', function () {
 })
 
 bot.on('ready', function () {
-    bot.user.setGame('L-Drago [l/help]-> This is a dragon').catch(console.error)
+    bot.user.setGame('Lead [l/help]-> This is a dragon').catch(console.error)
 })
 
 bot.on('guildMemberAdd', function (member) {
@@ -15,7 +15,7 @@ bot.on('guildMemberAdd', function (member) {
     return channel.send('Bienvenue ' + member.displayName + ' sur le serveur de Lead, visite le discord, fait attention , il peut y avoir des dragons^^, amuses-toi bien sur le Discord :smile: ')
   }).catch(console.error)
 
-  var channel = member.guild.channels.find('name', 'bienvenue_bye');
+  var channel = member.guild.channels.find('name', 'bienvenue-aurevoir');
   if (!channel) return
   var bvn = new Discord.RichEmbed()
   .setColor("RANDOM")
@@ -27,7 +27,7 @@ bot.on('guildMemberAdd', function (member) {
 
 bot.on('guildMemberRemove', function (member) {
   
-    var channel = member.guild.channels.find('name', 'bienvenue_bye');
+    var channel = member.guild.channels.find('name', 'bienvenue-aurevoir');
     if (!channel) return
     var bvn = new Discord.RichEmbed()
       .setColor("RANDOM")
